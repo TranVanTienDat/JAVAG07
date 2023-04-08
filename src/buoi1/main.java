@@ -1,5 +1,14 @@
 package buoi1;
 
+import OOP.Point;
+
+import OOP.Circle;
+import OOP.Customer;
+import OOP.Rectangle;
+import OOP.Date;
+import OOP.Time;
+//import OOP.Circle;
+import OOP.Invoice;
 /*
  * import java.util.Scanner;
  * 
@@ -128,23 +137,66 @@ package buoi1;
 
 
 
- public class main { public static void main(String[] args) {
-	 float a[] = {1,2,4,5,8,13};
-	 float b[];
-	 b = new float[3];
-	 b[0] =1;
-	 b[1] =3;
-	 b[2] =5;
-	 float sA = btMang.Tong(a);
-	 float sB = btMang.Tong(b);
-	 System.out.printf("\n%f", sA);
-	 System.out.printf("\n%f", sB);
+ public class main {
+//	 private static final double Point = 0;
+
+public static void main(String[] args) {
+//	 float a[] = {1,2,4,5,8,13};
+//	 float b[];
+//	 b = new float[3];
+//	 b[0] =1;
+//	 b[1] =3;
+//	 b[2] =5;
+//	 float sA = btMang.Tong(a);
+//	 float sB = btMang.Tong(b);
+//	 System.out.printf("\n%f", sA);
+//	 System.out.printf("\n%f", sB);
+//	 
+//	 float[] res = btMang.MinMax(a);
+//	 System.out.printf("\nmin = %f max = %f", res[0],res[1]);
+//	 
+//	 float s = btMang.Tong(a);
+//	 System.out.printf("\nmin= %f", s);
+	
+//	 OOP();
+//	 circle();
+//	 Rectangle();
+//	 Date();
+//	 Time();
+	Invoice();
+ }
+ 
+ static void OOP() {
+	 Point p = new Point(1,1);
+	 System.out.print("toa do: " + p.toString());
+	 Point p2 = new Point(5,10);
+	 System.out.print("toa do p2: " + p2.toString());
 	 
-	 float[] res = btMang.MinMax(a);
-	 System.out.printf("\nmin = %f max = %f", res[0],res[1]);
-	 
-	 float s = btMang.Tong(a);
-	 System.out.printf("\nmin= %f", s);
+//	 double pp2 = p.Distance(p2);
+ }
+ 
+ static void circle() {
+	 Circle a = new Circle(3);
+	 System.out.print(a.toString());
+ }
+ 
+ static void Rectangle() {
+	 Rectangle r =new  Rectangle(4.0f, 5.0f);
+	 System.out.print("dien tich: "+r.getArea());
  }
 	
+ static void Time() {
+	 Time t = new Time(4,5,6);
+	 System.out.print("time: "+t.toString());
+	 }
+ static void Date() {
+	 Date d = new Date(7,8,9);
+	 System.out.print("date: "+d.toString());
+ }
+ 
+ static void Invoice() {
+	 Customer a = new Customer(4, "dat", 5);
+	 Invoice in = new Invoice(30, a , 4) ;
+	 System.out.print("res: "+ in.toString());
+ }
 }
